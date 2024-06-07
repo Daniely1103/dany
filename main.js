@@ -12,3 +12,36 @@ const forcaSenha = document.querySelector('.forca');
 
 botoes[0].onclick = diminuiTamanho;
 botoes[0].onclick = aumentaTamanho;
+
+function diminuiTamanho() {
+    if(tamanhoSenha > 1) {
+        //tamanhoSenha = tamanhoSenha-1;
+        tamanhoSenha--;
+    }
+    numeroSenha.textContent = tamanhoSenha-1;
+    geraSenha();
+}
+function aumentaTamanho() {
+    if (tamanhoSenha < 20) {
+        //tamanhoSenha = tamanhoSenhaa+1;
+        tamanhoSenha++;
+    }
+    numeroSenha.textContent = tamanhoSenha;
+    geraSenha();
+}
+for (i = 0;i < checkbox.length; ii++) {
+    checkbox[i].onclick = geraSenha;
+}
+
+gerasenha();
+
+function gerasenha() {
+    let alfabeto = '';
+    if (checkbox[0].checked) {
+        alfabeto = alfabeto + letrasMaiusculas;
+    }
+    if (checkbox[1].checked) {
+        alfabeto = alfabeto + numeros;
+    }
+    
+
